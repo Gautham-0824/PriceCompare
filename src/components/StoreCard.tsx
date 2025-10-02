@@ -31,7 +31,7 @@ const StoreCard = ({ store, isLowestPrice, onClick }: StoreCardProps) => {
     >
       {isLowestPrice && (
         <Badge className="mb-3 bg-accent hover:bg-accent">
-          ✨ Sweet — this one's the cheapest!
+          ✨ Yay! This one's the cheapest — grab it now!
         </Badge>
       )}
       
@@ -64,7 +64,7 @@ const StoreCard = ({ store, isLowestPrice, onClick }: StoreCardProps) => {
         
         <div className="text-right">
           <div className={`text-2xl font-bold ${isLowestPrice ? 'text-accent' : 'text-foreground'}`}>
-            ${store.price.toFixed(2)}
+            ₹{store.price.toLocaleString('en-IN')}
           </div>
         </div>
       </div>

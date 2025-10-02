@@ -23,9 +23,9 @@ const Index = () => {
 
     if (productKey) {
       setActiveProduct(productKey);
-      toast.success(`Found ${productsDatabase[productKey].stores.length} stores selling ${productKey}!`);
+      toast.success(`🎉 Found ${productsDatabase[productKey].stores.length} stores selling ${productKey}!`);
     } else {
-      toast.error("Product not found. Try searching for iPhone, Sony headphones, MacBook, or Samsung Galaxy.");
+      toast.error("Oops! Product not found. Try searching for Samsung S23, iPhone, boAt earbuds, or OnePlus.");
     }
   };
 
@@ -37,7 +37,7 @@ const Index = () => {
 
     if (productKey) {
       setActiveProduct(productKey);
-      toast.success(`Showing prices for ${productKey}`);
+      toast.success(`✨ Showing best prices for ${productKey}`);
     }
   };
 
