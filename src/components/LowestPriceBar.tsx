@@ -16,9 +16,9 @@ const LowestPriceBar = ({ storeName, price, isVisible }: LowestPriceBarProps) =>
         <div className="flex items-center gap-3">
           <TrendingDown className="h-5 w-5" />
           <div>
-            <div className="text-sm font-medium">🎉 Best Deal Alert!</div>
+            <div className="text-sm font-medium">Best Price Found!</div>
             <div className="text-lg font-bold">
-              {storeName} • ₹{price.toLocaleString('en-IN')}
+              {storeName} • ${price.toFixed(2)}
             </div>
           </div>
         </div>
