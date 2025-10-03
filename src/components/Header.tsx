@@ -11,28 +11,32 @@ const Header = () => {
             <span>PriceCompare</span>
           </a>
           <nav className="hidden md:flex items-center gap-6">
-            <a href="#" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <a href="/" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               Home
             </a>
-            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            <a href="/categories" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               Categories
             </a>
-            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            <a href="/about" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               About
             </a>
-            <a href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            <a href="/contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               Contact
             </a>
           </nav>
         </div>
         
         <div className="flex items-center gap-3">
-          <Button variant="ghost" className="hidden md:inline-flex">
-            Login
-          </Button>
-          <Button className="hidden md:inline-flex">
-            Sign Up
-          </Button>
+          <a href="/auth">
+            <Button variant="ghost" className="hidden md:inline-flex">
+              Login
+            </Button>
+          </a>
+          <a href="/auth">
+            <Button className="hidden md:inline-flex">
+              Sign Up
+            </Button>
+          </a>
           <Button variant="ghost" size="icon" className="md:hidden">
             <Menu className="h-5 w-5" />
           </Button>

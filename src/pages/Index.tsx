@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import Header from "@/components/Header";
 import SearchHero from "@/components/SearchHero";
 import TrendingProducts from "@/components/TrendingProducts";
@@ -10,11 +11,21 @@ import { productsDatabase, ProductName } from "@/data/productsData";
 import { toast } from "sonner";
 
 const Index = () => {
+  const [searchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState("");
   const [activeProduct, setActiveProduct] = useState<ProductName | null>(null);
   const [sortBy, setSortBy] = useState("price-low");
   const [selectedStores, setSelectedStores] = useState<string[]>([]);
   const [selectedStoreForModal, setSelectedStoreForModal] = useState<number | null>(null);
+
+  // Handle search from URL params
+  useEffect(() => {
+    const searchFromUrl = searchParams.get('search');
+    if (searchFromUrl) {
+      setSearchQuery(searchFromUrl);
+      handleProductClick(searchFromUrl);
+    }
+  }, [searchParams]);
 
   const handleSearch = () => {
     const productKey = Object.keys(productsDatabase).find(

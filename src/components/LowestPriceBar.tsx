@@ -18,7 +18,7 @@ const LowestPriceBar = ({ storeName, price, isVisible }: LowestPriceBarProps) =>
           <div>
             <div className="text-sm font-medium">Best Price Found!</div>
             <div className="text-lg font-bold">
-              {storeName} • ${price.toFixed(2)}
+              {storeName} • ₹{price.toLocaleString('en-IN')}
             </div>
           </div>
         </div>

@@ -64,7 +64,7 @@ const StoreCard = ({ store, isLowestPrice, onClick }: StoreCardProps) => {
         
         <div className="text-right">
           <div className={`text-2xl font-bold ${isLowestPrice ? 'text-accent' : 'text-foreground'}`}>
-            ${store.price.toFixed(2)}
+            ₹{store.price.toLocaleString('en-IN')}
           </div>
         </div>
       </div>

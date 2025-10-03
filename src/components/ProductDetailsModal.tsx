@@ -108,7 +108,7 @@ const ProductDetailsModal = ({
                     <div className={`text-xl font-bold ${
                       store.price === lowestPrice ? 'text-accent' : 'text-foreground'
                     }`}>
-                      ${store.price.toFixed(2)}
+                      ₹{store.price.toLocaleString('en-IN')}
                     </div>
                   </div>
                   <Button
